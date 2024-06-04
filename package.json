@@ -1,0 +1,19 @@
+{
+  "name": "ono-tebe-nado",
+  "version": "1.0.0",
+  "description": "https://github.com/annakozacenko/ono-tebe-nado.git",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "check": "prettier --check './**/*.{html,css,js}'",
+    "format":"prettier --write './**/*.{html,css,js}'",
+    "lint":"stylelint **/*.css",
+    "lintfix":"stylelint **/*.css --fix"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prettier": "^3.3.0",
+    "stylelint": "^16.6.1"
+  }
+}
