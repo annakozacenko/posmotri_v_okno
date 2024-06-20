@@ -36,3 +36,306 @@ ul,
 ol {
   list-style: none;
 }
+
+/* Моя часть */
+
+.content {
+  padding: 135px 30px;
+  display: flex;
+  flex-direction: row;
+  align-content: flex-end;
+  gap: 30px;
+  /* background-color: rgb(66, 71, 71); */
+}
+
+/* Не нравится, как задана ширина столбцов */
+
+/* Левая часть */
+
+.result {
+  width: 711px;
+}
+
+.result__video-container {
+  width: 100%;
+  height: 386px;
+  margin-bottom: 18px;
+  margin-top: 76px;
+  position: relative;
+}
+
+.result__video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Так ОК делать? */
+
+.search-form__fieldset {
+  border: none;
+  /* width: fit-content; */
+}
+
+.search-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.search-form__label {
+  border-left: none; /* Убираем левую границу */
+  border-right: none; /* Убираем правую границу */
+  width: fit-content;
+  font-family: inherit;
+  color: inherit;
+  overflow: visible;
+
+  /* Проверить на необходимость всех свойств */
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+
+
+.search-form__fieldset-title {
+  font-family: 'Fira Sans Condensed';
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.1;
+  text-align: left;
+  color: #ffff;
+  margin-bottom: 6px;
+}
+
+.search-form__textfield {
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  border-left: none;
+  border-right: none;
+  width: fit-content;
+  font-family: inherit;
+  color: inherit;
+
+  /* Что с этим делать? */
+  min-width: 224px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.1;
+  text-align: left;
+  background-color: transparent;
+  letter-spacing: -0.15px;
+  /* Фигня какая-то */
+  overflow: visible;
+}
+
+.search-form__textfield:active{
+  border:1px #fff solid;
+}
+/* Не работает */
+
+.search-form__label:has(.search-form__textfield:focus-visible) {
+  border-color: #fff; /* Цвет границы при фокусе */
+}
+
+.search-form__label .search-form__textfield:focus {
+  outline: none; /* Убираем стандартный outline */
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+}
+
+.search-form__pseudo-checkbox {
+  vertical-align: middle;
+
+  /* Проверить на необходимость всех свойств */
+  width: 19px;
+  height: 19px;
+  border: 1px solid #fff;
+  display: inline-block;
+  position: relative;
+  margin-right: 5px;
+}
+
+.search-form__label-text {
+  appearance: none;
+}
+
+/* Это зачем? */
+
+/* .search-form__checkbox {
+  display: none;
+} */
+
+/* Проверить на необходимость всех свойств */
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  content: '';
+  display: inline-block;
+  margin-left: 1px;
+  margin-bottom: 1px;
+  /* position: absolute; */
+  /* top: 50%;
+  left: 50%; */
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  /* transform: translate(-50%, -50%); */
+}
+
+.button {
+  background-color: transparent;
+  border-color: #fff;
+  font-family: inherit;
+  color: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  height: 34px;
+  cursor: pointer;
+}
+
+.search-form__submit-button {
+  width: 194px;
+  align-self: flex-end;
+}
+
+.more-button {
+  width: 100%;
+}
+
+.button:focus {
+  outline: none;
+}
+
+
+
+.content__card-link_current {
+  background-color: #545050;
+}
+
+.search-form__label:hover .search-form__label-text,
+.button:hover,
+.content__card-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+
+.button:active,
+.content__card-link:active {
+  text-decoration: none;
+  background: rgba(84, 80, 80, 1);
+}
+
+.search-form__label:active .search-form__label-text{
+  text-decoration: none;
+}
+
+.button:active{
+  background: rgba(84, 80, 80, 1);
+  text-decoration: none;
+}
+/* Правая часть */
+
+.content__details {
+  /* width: auto; */
+  width: 399px;
+}
+
+.content__list {
+  width: 100%;
+  height: 300px;
+  overflow-y: scroll;
+  position: relative;
+  scrollbar-width: none;
+}
+
+.title {
+  margin-bottom: 20px;
+  font-family: Oswald;
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 0.94;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.content__list-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.content__video-card {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-content: flex-start;
+  align-items: flex-start;
+  padding: 2px;
+}
+
+.content__video-card-thumbnail {
+  height: 103px;
+  width: 194px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.content__video-card-description-container {
+  width: auto;
+}
+
+.preloader {
+  position: absolute;
+  inset: 0;
+}
+
+.content__card-link {
+  text-decoration: none;
+  color: #ffff;
+  display: block;
+  margin: 2px;
+}
+
+.content__video-card-title {
+  font-family: Oswald;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: left;
+  text-transform: uppercase;
+  color: #ffff;
+}
+
+.content__video-card-description {
+  font-family: 'Fira Sans Condensed';
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 0.9;
+  text-align: left;
+  color: #ffff;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
