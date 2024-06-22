@@ -43,26 +43,24 @@ ol {
 /* Моя часть */
 
 .content {
-  padding: 135px 30px;
+  padding: 15px;
   display: flex;
   flex-direction: row;
-  align-content: end;
+  align-items: end;
   gap: 30px;
-  
 }
 
 /* Левая часть */
 
 .result {
   width: 711px;
-  margin: auto;
 }
 
 .result__video-container {
   width: 100%;
   height: 386px;
-  margin-bottom: 18px;
-  margin-top: 76px;
+  margin-block-end: 18px;
+  /* margin-block-start: 76px; */
   position: relative;
 }
 
@@ -108,20 +106,24 @@ ol {
 }
 
 .search-form__textfield {
-  border-top: 2px solid #fff;
-  border-bottom: 2px solid #fff;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
   border-left: none;
   border-right: none;
   width: fit-content;
   font-family: inherit;
   color: inherit;
-  min-width: 224px;
+
+  /* Вот тут вопросики */
+
+  max-width: 224px;
+
+  width: 100%;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.1;
   text-align: left;
   background-color: transparent;
-  letter-spacing: -0.15px;
 }
 
 .search-form__textfield:active {
@@ -214,10 +216,6 @@ ol {
   text-decoration: none;
 }
 
-.button:active {
-  background: rgba(84, 80, 80, 1);
-  text-decoration: none;
-}
 /* Правая часть */
 
 .content__details {
@@ -226,12 +224,14 @@ ol {
   /* width: 100%; */
 }
 
+/* Вот тут вопросики */
+
 .content__list {
   width: 100%;
   height: 300px;
-  overflow-y: scroll;
+  overflow-y: auto;
   position: relative;
-  scrollbar-width: none;
+  /* scrollbar-width: 1px; */
 }
 
 .title {
@@ -281,7 +281,9 @@ ol {
 }
 
 .content__video-card-description-container {
-  width: auto;
+  max-width: 200px;
+  /* width: auto; */
+  overflow: hidden;
 }
 
 .content__video-card-title {
@@ -292,6 +294,10 @@ ol {
   text-align: left;
   text-transform: uppercase;
   color: #ffff;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
 }
 
 .content__video-card-description {
