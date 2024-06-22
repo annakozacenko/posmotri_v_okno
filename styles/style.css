@@ -75,7 +75,7 @@ ol {
   width: 100%;
 }
 
-.search-form__fieldset-middle{
+.search-form__fieldset-middle {
   margin: 0 30px 0 40px;
 }
 
@@ -172,7 +172,6 @@ ol {
   text-align: center;
   height: 34px;
   cursor: pointer;
-  
 }
 
 .button:focus {
@@ -219,7 +218,6 @@ ol {
 .content__details {
   width: 399px;
 }
-
 
 .content__list {
   width: 100%;
@@ -276,7 +274,7 @@ ol {
 
 .content__video-card-description-container {
   max-width: 200px;
-  width: 100%; 
+  width: 100%;
   overflow: hidden;
 }
 
