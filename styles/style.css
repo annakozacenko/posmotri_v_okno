@@ -16,6 +16,9 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+   display: flex;
+  justify-content: center;
+  align-items: center; 
 }
 
 h1,
@@ -48,11 +51,7 @@ ol {
   /* background-color: rgb(66, 71, 71); */
 }
 
-.page{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 
 /* Не нравится, как задана ширина столбцов */
 
@@ -111,7 +110,7 @@ ol {
 
 
 .search-form__fieldset-title {
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.1;
@@ -146,13 +145,19 @@ ol {
 }
 /* Не работает */
 
-.search-form__label:has(.search-form__textfield:focus-visible) {
-  border-color: #fff; /* Цвет границы при фокусе */
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
 }
 
-.search-form__label .search-form__textfield:focus {
-  outline: none; /* Убираем стандартный outline */
+
+
+.content__card-link:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
 }
+
 
 .search-form__checkbox-list {
   display: flex;
@@ -210,6 +215,15 @@ ol {
   cursor: pointer;
 }
 
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
 .search-form__submit-button {
   width: 194px;
   align-self: flex-end;
@@ -217,10 +231,6 @@ ol {
 
 .more-button {
   width: 100%;
-}
-
-.button:focus {
-  outline: none;
 }
 
 
@@ -304,10 +314,10 @@ ol {
   width: auto;
 }
 
-.preloader {
+/* .preloader {
   position: absolute;
   inset: 0;
-}
+} */
 
 .content__card-link {
   text-decoration: none;
